@@ -1,0 +1,215 @@
+/* style_CV.css */
+
+/* Reset minimal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+/* Entête avec couleur claire et élégante */
+.entete {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    background-color: #d9e4ff; /* bleu très clair */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.entete a.retour img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    transition: transform 0.25s ease;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+}
+
+.entete a.retour img:hover {
+    transform: scale(1.1);
+}
+
+.entete h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #2c3e50;
+    flex-grow: 1;
+}
+
+/* Corps - conteneur principal */
+.corps_parcours {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 0.08);
+    display: flex;
+    gap: 40px;
+    padding: 40px 35px;
+}
+
+/* Colonne principale - expériences */
+.contenu1 {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Bloc expérience : flex avec logo + texte alignés */
+.experience {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-left: 4px solid #6c63ff;
+    padding-left: 25px;
+    transition: background-color 0.3s ease;
+    border-radius: 6px;
+}
+
+.experience:hover {
+    background-color: #f0f2ff;
+}
+
+.experience img {
+    width: 110px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 4px 8px rgb(108 99 255 / 0.2);
+    flex-shrink: 0;
+}
+
+/* Texte à côté du logo : grille 2 lignes alignées */
+.experience > div {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 6px;
+}
+
+.experience h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin: 0;
+}
+
+.experience h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #666;
+    margin: 0;
+}
+
+/* Colonne liens */
+.contact_lien_vertical {
+    flex: 1;
+    background-color: #f4f5fa;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #6c63ff;
+}
+
+.contact_lien_vertical p {
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+    color: #5a54d6;
+    letter-spacing: 0.04em;
+}
+
+/* Boutons liens */
+.contact_lien_vertical a.btnCV {
+    background-color: #6c63ff;
+    color: white;
+    text-decoration: none;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 2px 8px rgb(108 99 255 / 0.35);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+}
+
+.contact_lien_vertical a.btnCV:hover,
+.contact_lien_vertical a.btnCV:focus {
+    background-color: #574edb;
+    box-shadow: 0 4px 16px rgb(87 78 219 / 0.6);
+    outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .corps_parcours {
+        flex-direction: column;
+        padding: 25px 20px;
+        gap: 25px;
+    }
+
+    .contenu1 {
+        gap: 30px;
+    }
+
+    .experience {
+        flex-direction: column;
+        align-items: flex-start;
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .experience:hover {
+        background-color: transparent;
+    }
+
+    .experience img {
+        width: 100%;
+        max-width: 220px;
+        margin-bottom: 15px;
+        box-shadow: none;
+    }
+
+    .experience > div {
+        grid-template-rows: auto auto;
+        width: 100%;
+    }
+
+    .contact_lien_vertical {
+        flex-direction: row;
+        padding: 15px 10px;
+        gap: 15px;
+        border-radius: 8px;
+        box-shadow: none;
+    }
+
+    .contact_lien_vertical p {
+        display: none;
+    }
+
+    .contact_lien_vertical a.btnCV {
+        flex: 1;
+        font-size: 0.95rem;
+        padding: 12px 10px;
+        margin-bottom: 0;
+        box-shadow: none;
+        border-radius: 6px;
+    }
+}

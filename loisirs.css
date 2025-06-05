@@ -1,0 +1,77 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: 100vh;
+    overflow: hidden; /* Empêche le scroll */
+}
+
+/* En-tête */
+.entete {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.entete h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.entete img {
+    cursor: pointer;
+}
+
+/* Corps des loisirs */
+.corps_loisirs {
+    height: calc(100vh - 60px); /* Moins la hauteur de l'en-tête */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+/* Titre de la section */
+.corps_loisirs h1 {
+    font-size: 22px;
+    margin: 0;
+}
+
+/* Image principale */
+#monImage {
+    max-width: 80%;
+    max-height: 40vh;
+    height: auto;
+    width: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteneur de boutons */
+.containerbutton {
+    text-align: center;
+}
+
+/* Boutons */
+.button-ceremony {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-ceremony:hover {
+    background-color: #004d99;
+}

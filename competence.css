@@ -1,0 +1,96 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FOND & POLICE GÉNÉRALE */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f2f6fc;
+    color: #2c3e50;
+    padding: 40px 20px;
+}
+
+/* EN-TÊTE */
+.entete {
+    display: flex;
+    align-items: center;
+    background-color: #4a90e2;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+}
+
+.entete img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    transition: transform 0.2s ease;
+}
+
+.entete img:hover {
+    transform: scale(1.1);
+}
+
+.entete h1 {
+    font-size: 2rem;
+}
+
+/* CONTENU PRINCIPAL */
+.contenu {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+/* BLOCS DE COMPÉTENCES */
+.bloc {
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    border-left: 6px solid #4a90e2;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease;
+}
+
+.bloc:hover {
+    transform: translateY(-3px);
+}
+
+.bloc h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #34495e;
+    position: relative;
+}
+
+.bloc ul {
+    list-style-type: circle;
+    padding-left: 25px;
+}
+
+.bloc ul li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .entete {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .contenu {
+        padding: 0 10px;
+    }
+}
